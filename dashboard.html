@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nedbank Online Banking - Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00a651;
+        }
+        
+        .user-welcome {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: #00a651;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        .account-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .account-name {
+            font-weight: 500;
+        }
+        
+        .account-number {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .account-balance {
+            text-align: right;
+        }
+        
+        .balance-amount {
+            font-weight: 600;
+        }
+        
+        .balance-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #00a651;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .feature-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .info-links {
+            list-style: none;
+        }
+        
+        .info-links li {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .info-links a {
+            color: #666;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .info-links a:hover {
+            color: #00a651;
+        }
+        
+        .footer {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Nedbank</div>
+        <div class="user-welcome">
+            <div class="user-avatar">J</div>
+            <div>Welcome, John</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="dashboard-grid">
+            <div class="card">
+                <h2 class="card-title">Everyday banking</h2>
+                
+                <div class="account-item">
+                    <div>
+                        <div class="account-name">Saving Account</div>
+                        <div class="account-number">2735010349</div>
+                    </div>
+                    <div class="account-balance">
+                        <div class="balance-amount">R686.01</div>
+                        <div class="balance-label">Available</div>
+                    </div>
+                </div>
+                
+                <div class="account-item">
+                    <div>
+                        <div class="account-name">Current Account</div>
+                        <div class="account-number">1351057196</div>
+                    </div>
+                    <div class="account-balance">
+                        <div class="balance-amount">R1,985.15</div>
+                        <div class="balance-label">Available</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">Free savings feature</h2>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">MyPocket</h3>
+                    <p class="feature-description">Create pockets to organize your savings goals</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">Rewards balance</h2>
+                
+                <div class="account-item">
+                    <div>
+                        <div class="account-name">Greenbacks</div>
+                        <div class="account-number">46000063991</div>
+                    </div>
+                    <div class="account-balance">
+                        <div class="balance-amount">R680.00</div>
+                        <div class="balance-label">Balance</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2 class="card-title">Loans</h2>
+                
+                <div class="account-item">
+                    <div>
+                        <div class="account-name">Personal Loan</div>
+                        <div class="account-number">8745001234</div>
+                    </div>
+                    <div class="account-balance">
+                        <div class="balance-amount">R15,240.75</div>
+                        <div class="balance-label">Outstanding</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card full-width">
+                <h2 class="card-title">Important information</h2>
+                <ul class="info-links">
+                    <li><a href="#">Fraud awareness <span>›</span></a></li>
+                    <li><a href="#">Verify payments <span>›</span></a></li>
+                    <li><a href="#">Accessibility <span>›</span></a></li>
+                    <li><a href="#">Browser requirements <span>›</span></a></li>
+                    <li><a href="#">Online share trading <span>›</span></a></li>
+                    <li><a href="#">Privacy notice <span>›</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Nedbank Limited (Reg No 1951/000009/06). Licensed financial services and registered credit provider (NCRCP16).</p>
+    </footer>
+</body>
+</html>
